@@ -1,4 +1,4 @@
-# AI Hashtag Generator 💬
+# AI Hashtag Generator #️⃣
 
 This application is developed using Vite, React with TypeScript, and Chakra UI. It is integrated with OpenAI API to generate a list of hashtag options based on the provided text. 
 
