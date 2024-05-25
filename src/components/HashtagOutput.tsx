@@ -4,8 +4,8 @@ import { useAppContext } from "../contexts/AppContext";
 import { MotionButton } from "../utils/motionUtils";
 import useApplicationData from "../hooks/useApplicationData";
 
-function KeywordsOutput() {
-  const { copyKeywords } = useApplicationData();
+function HashtagOutput() {
+  const { copyHashtags } = useApplicationData();
   const { state } = useAppContext();
   const { isLoading, showKeywords, keywords, keywordsLength } = state;
   
@@ -29,7 +29,7 @@ function KeywordsOutput() {
       isClosable: true,
       position: "top"
     });
-    copyKeywords(`${keywords}`)
+    copyHashtags(`${keywords}`)
   };
 
   return (
@@ -66,4 +66,4 @@ function KeywordsOutput() {
   );
 }
 
-export default KeywordsOutput;
+export default HashtagOutput;

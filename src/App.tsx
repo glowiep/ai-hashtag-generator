@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TextInput from "./components/TextInput";
-import KeywordsOutput from "./components/KeywordsOutput";
+import HashtagOutput from "./components/HashtagOutput"
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
             paddingTop: "2.25em",            
           }}
         >
-          <KeywordsOutput />
+          <HashtagOutput />
           <Footer />
         </motion.div>
       </Container>

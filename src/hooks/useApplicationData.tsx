@@ -74,8 +74,8 @@ const useApplicationData = () => {
    * @function
    * @returns {void}
    */
-  const copyKeywords = (keywordsOutput: string) => {
-    copyTextToClipboard(keywordsOutput)
+  const copyHashtags = (hashtagOutput: string) => {
+    copyTextToClipboard(hashtagOutput)
       .then(() => {
         // If copied successfully
        console.log("Copied to clipboard!")
@@ -87,7 +87,7 @@ const useApplicationData = () => {
 
   return {
     extractKeywords,
-    copyKeywords,
+    copyHashtags,
     setInput
   }
   
