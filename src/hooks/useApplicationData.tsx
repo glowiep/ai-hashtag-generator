@@ -22,7 +22,7 @@ const useApplicationData = () => {
       const data = {
         model: 'gpt-3.5-turbo-instruct',
         prompt:
-          `Extract keywords from this text. Make the first letter of every word uppercase and separate with commas \n\n` +
+          `Extract keywords from this text that can be used as social media hashtags. Make every word lowercase, prepend a hash '#' in front of every word, and separate each hashtag with commas \n\n` +
           input +
           '',
         temperature: 0.5,

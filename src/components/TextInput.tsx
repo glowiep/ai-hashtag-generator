@@ -55,7 +55,7 @@ function TextInput() {
         }) => setInput(e.target.value)}
       ></Textarea>
       <MotionButton {...submitButtonStyles} onClick={() => submitText()}>
-        🪄 Extract Keywords
+        🪄 Generate Hashtags
       </MotionButton>
     </>
   );

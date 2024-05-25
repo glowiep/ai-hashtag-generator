@@ -1,8 +1,8 @@
 const applicationText = {
   Header: {
-    heading: "🪄 AI Keyword Extractor",
+    heading: "🪄 AI Hashtag Generator",
     description:
-      "Enter a text snippet below to extract keywords from its content.",
+      "Enter a social media post snippet below to generate hashtags options based on its content.",
   },
   Footer: { credits: "Powered By OpenAI" },
 };
