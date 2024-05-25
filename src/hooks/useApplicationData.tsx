@@ -1,9 +1,11 @@
 import axios from "axios";
 import { ACTIONS, useAppContext } from "../contexts/AppContext";
+import applicationText from "../const/applicationText";
 
 const useApplicationData = () => {
   const { state, dispatch } = useAppContext();
-  
+  const promptText = applicationText.OpenAI.promptText;
+  const model = applicationText.OpenAI.model;  
   /**
    * Extract keywords using Open API
    * @param input - the text snippet entered by the user
@@ -20,9 +22,9 @@ const useApplicationData = () => {
       };
 
       const data = {
-        model: 'gpt-3.5-turbo-instruct',
+        model,
         prompt:
-          `Extract keywords from this text that can be used as social media hashtags. Make every word lowercase, prepend a hash '#' in front of every word. \n\n` +
+          `${promptText}` +
           input +
           '',
         temperature: 0.5,
