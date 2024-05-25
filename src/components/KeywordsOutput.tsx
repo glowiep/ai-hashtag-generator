@@ -7,7 +7,7 @@ import useApplicationData from "../hooks/useApplicationData";
 function KeywordsOutput() {
   const { copyKeywords } = useApplicationData();
   const { state } = useAppContext();
-  const { isLoading, showKeywords, keywords,keywordsLength } = state;
+  const { isLoading, showKeywords, keywords, keywordsLength } = state;
   
   const copyButtonStyles = {
     whileTap: { scale: 0.5, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" },
@@ -46,7 +46,7 @@ function KeywordsOutput() {
             maxH={300}
           >
             <Heading color="white" marginBottom="0.75rem" size="normal">
-              Keywords Output ({keywordsLength}):
+              Generated Hashtags ({keywordsLength}):
             </Heading>
             <Text fontSize="normal" textAlign="left" paddingLeft="1em">
               {/* ARRAY OF KEYWORDS HERE */}
