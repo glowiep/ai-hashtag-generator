@@ -33,7 +33,6 @@ function TextInput() {
     variant: "solid",
     borderRadius: "2em",
     bg: "blue.200",
-    w: "200px",
     px: { base: "1.5em", md: "2em" },
     gap: { base: "0.5em", md: "1em" },
     fontSize: { base: "sm", md: "lg" },
