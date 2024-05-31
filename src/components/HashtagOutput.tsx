@@ -1,4 +1,4 @@
-import { Heading, Text, CircularProgress, Box, useToast } from "@chakra-ui/react";
+import { Heading, Text, CircularProgress, Box, useToast, Tooltip } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
 import { useAppContext } from "../contexts/AppContext";
 import { MotionButton } from "../utils/motionUtils";
@@ -54,12 +54,14 @@ function HashtagOutput() {
             </Text>
           </Box>
           {/* Copy icon here */}
-          <MotionButton
-            {...copyButtonStyles}
-            onClick={() => handleCopy()}
-          >
-            <CopyIcon />
-          </MotionButton>
+          <Tooltip label='Copy to Clipboard' fontSize='md'>
+            <MotionButton
+              {...copyButtonStyles}
+              onClick={() => handleCopy()}
+            >
+              <CopyIcon />
+            </MotionButton>
+          </Tooltip>
         </>
       )}
     </>
