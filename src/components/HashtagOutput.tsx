@@ -7,7 +7,7 @@ import useApplicationData from "../hooks/useApplicationData";
 function HashtagOutput() {
   const { copyHashtags } = useApplicationData();
   const { state } = useAppContext();
-  const { isLoading, showKeywords, keywords, keywordsLength } = state;
+  const { isLoading, showHashtags, hashtags, hashtagsLength } = state;
   
   const copyButtonStyles = {
     whileTap: { scale: 0.5, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)" },
@@ -23,20 +23,20 @@ function HashtagOutput() {
   function handleCopy() {
     toast({
       title: 'Copied to Clipboard!',
-      description: 'The keywords have been copied to your keyboard.',
+      description: 'The hashtags have been copied to your keyboard.',
       status: 'success',
       duration: 5000,
       isClosable: true,
       position: "top"
     });
-    copyHashtags(`${keywords}`)
+    copyHashtags(`${hashtags}`)
   };
 
   return (
     <>
       {isLoading && <CircularProgress isIndeterminate color="blue.300" />}
 
-      {showKeywords && (
+      {showHashtags && (
         <>
           <Box
             bg="blue.700"
@@ -46,11 +46,11 @@ function HashtagOutput() {
             maxH={300}
           >
             <Heading color="white" marginBottom="0.75rem" size="normal">
-              Generated Hashtags ({keywordsLength}):
+              Generated Hashtags ({hashtagsLength}):
             </Heading>
             <Text fontSize="normal" textAlign="left" paddingLeft="1em">
-              {/* ARRAY OF KEYWORDS HERE */}
-              {keywords}
+              {/* ARRAY OF HASHTAGS HERE */}
+              {hashtags}
             </Text>
           </Box>
           {/* Copy icon here */}

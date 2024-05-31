@@ -7,11 +7,11 @@ export const ACTIONS = {
 }
 
 interface State {
-  keywords: string;
+  hashtags: string;
   isLoading: boolean;
-  showKeywords: boolean;
+  showHashtags: boolean;
   input: string;
-  keywordsLength: number;
+  hashtagsLength: number;
 }
 
 interface ExtractBeginAction {
@@ -21,8 +21,8 @@ interface ExtractBeginAction {
 interface SetExtractedAction {
   type: typeof ACTIONS.SET_EXTRACTED;
   payload: {
-    keywords: string;
-    keywordsLength: number;
+    hashtags: string;
+    hashtagsLength: number;
   };
 }
 
@@ -39,24 +39,24 @@ function reducer(state: State, action: Action): State {
       return {
         ...state,
         isLoading: true,
-        showKeywords: false
+        showHashtags: false
       }
     case ACTIONS.SET_EXTRACTED:
       return {
         ...state,
         isLoading: false,
-        showKeywords: true,
-        keywords: (action as SetExtractedAction).payload.keywords,
-        keywordsLength: (action as SetExtractedAction).payload.keywordsLength
+        showHashtags: true,
+        hashtags: (action as SetExtractedAction).payload.hashtags,
+        hashtagsLength: (action as SetExtractedAction).payload.hashtagsLength
       }
     case ACTIONS.SET_INPUT:
       return {
         ...state,
         isLoading: false,
-        showKeywords: false,
+        showHashtags: false,
         input: (action as SetInputAction).payload,
-        keywords: '',
-        keywordsLength: 0
+        hashtags: '',
+        hashtagsLength: 0
       }
     default:
       throw new Error(
@@ -67,10 +67,10 @@ function reducer(state: State, action: Action): State {
 
 const INITIAL_STATE = {
   isLoading: false,
-  showKeywords: false,
+  showHashtags: false,
   input: '',
-  keywords: '',
-  keywordsLength: 0
+  hashtags: '',
+  hashtagsLength: 0
 }
 
 interface AppContextProps {

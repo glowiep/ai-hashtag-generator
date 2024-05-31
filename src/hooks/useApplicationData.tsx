@@ -7,10 +7,10 @@ const useApplicationData = () => {
   const promptText = applicationText.OpenAI.promptText;
   const model = applicationText.OpenAI.model;  
   /**
-   * Extract keywords using Open API
+   * Extract hashtags using Open API
    * @param input - the text snippet entered by the user
    */
-  const extractKeywords = async (input: string) => {
+  const extractHashtags = async (input: string) => {
     // return console.log(input, state)
       dispatch({ type: ACTIONS.EXTRACT_BEGIN })
       console.log(state)
@@ -42,9 +42,9 @@ const useApplicationData = () => {
         );
         const json = await response.data;
         console.log(json.choices[0].text.trim());
-        const keywords = json.choices[0].text.trim().replace(/,([^,]*)$/, '$1');
-        const keywordsLength = keywords.split(" ").length;
-        dispatch({ type: ACTIONS.SET_EXTRACTED, payload: {keywords, keywordsLength} })
+        const hashtags = json.choices[0].text.trim().replace(/,([^,]*)$/, '$1');
+        const hashtagsLength = hashtags.split(" ").length;
+        dispatch({ type: ACTIONS.SET_EXTRACTED, payload: {hashtags, hashtagsLength} })
       } catch (error) {
         console.log(error);
       }
@@ -70,7 +70,7 @@ const useApplicationData = () => {
   };
 
   /**
-   * This copies the keyword outputs to the users clipboard
+   * This copies the hashtag outputs to the users clipboard
    * @function
    * @returns {void}
    */
@@ -86,7 +86,7 @@ const useApplicationData = () => {
   };
 
   return {
-    extractKeywords,
+    extractHashtags,
     copyHashtags,
     setInput
   }

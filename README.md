@@ -9,7 +9,7 @@ This application is developed using Vite, React with TypeScript, and Chakra UI. 
 ![AWS Amplify](https://a11ybadges.com/badge?logo=awsamplify)
 
 
-<!-- !["AI Keyword Extractor project"](https://github.com/glowiep/ai-keyword-extractor/blob/main/public/ai-keyword-extractor.png?raw=true) -->
+<!-- !["AI Hashtag Generator project"](https://github.com/glowiep/ai-keyword-extractor/blob/main/public/ai-keyword-extractor.png?raw=true) -->
 
 ---
 
@@ -18,8 +18,8 @@ This application is developed using Vite, React with TypeScript, and Chakra UI. 
 - Typescript is used in this project.
 - useContext and useReducer is implemented to handle state.
 - Axios is used instead of fetch() for HTTP requests.
-- Additional feature - Copy keywords to clipboard button.
-- Additional feature - Keyword Output section includes the keywords count.
+- Additional feature - Copy hashtags to clipboard button.
+- Additional feature - Hashtag Output section includes the hashtag count.
 - Minor differences in interface design.
 - Framer-motion was used with ChakraUI components to animate displays.
 

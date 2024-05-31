@@ -5,7 +5,7 @@ import useApplicationData from "../hooks/useApplicationData";
 import { useAppContext } from "../contexts/AppContext";
 
 function TextInput() {
-  const { extractKeywords, setInput } = useApplicationData();
+  const { extractHashtags, setInput } = useApplicationData();
   const { state } = useAppContext();
   const input = state.input;
 
@@ -23,7 +23,7 @@ function TextInput() {
       });
       return;
     } else {
-      return extractKeywords(`${input}`);
+      return extractHashtags(`${input}`);
     }
   };
 
