@@ -28,7 +28,7 @@ function Footer() {
       <Flex justifyContent="center" alignItems="center">
         <Tooltip label='View on GitHub'>
           <MotionButton {...githubButtonStyles}>
-            <a href="https://github.com/glowiep/ai-keyword-extractor" target="_blank" rel="noreferrer">
+            <a href="https://github.com/glowiep/ai-hashtag-generator" target="_blank" rel="noreferrer">
               <FaGithub size="1.5em" />
             </a>
           </MotionButton>
