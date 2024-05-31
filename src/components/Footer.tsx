@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Tooltip } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import applicationText from "../const/applicationText";
 import { MotionButton } from "../utils/motionUtils";
@@ -26,11 +26,13 @@ function Footer() {
         <Text>{applicationText.Footer.credits}</Text>
       </Flex>
       <Flex justifyContent="center" alignItems="center">
-        <MotionButton {...githubButtonStyles}>
-          <a href="https://github.com/glowiep/ai-keyword-extractor" target="_blank" rel="noreferrer">
-            <FaGithub size="1.5em" />
-          </a>
-        </MotionButton>
+        <Tooltip label='View on GitHub'>
+          <MotionButton {...githubButtonStyles}>
+            <a href="https://github.com/glowiep/ai-keyword-extractor" target="_blank" rel="noreferrer">
+              <FaGithub size="1.5em" />
+            </a>
+          </MotionButton>
+        </Tooltip>
       </Flex>
     </Box>
   );
